@@ -7,7 +7,9 @@ Write a class to describe a `CreditCard`.
 The `CreditCard` class should have the following attributes:
 
 - Credit card # (16-digits)
+
 > Note: Do *not* check a real credit card number into version control.
+
 - Expiration Date (two digit month, two digit year)
 - CCV (3 digit number on the back)
 - Name

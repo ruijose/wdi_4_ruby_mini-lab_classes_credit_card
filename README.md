@@ -1,6 +1,6 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
-# Lab: Credit Card Class w/RSpec
+# Lab: Credit Card Class
 
 Write a class to describe a `CreditCard`.
 

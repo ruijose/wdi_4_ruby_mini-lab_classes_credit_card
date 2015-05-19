@@ -17,8 +17,10 @@ It should have the following methods:
 
 - `initialize` - Used for creating a new credit card.
 - `valid?` - This checks the validity of the credit card. Check that it has a name, proper length zip code, 16-digit number and an expiration date in the future.
-> Note: Use a [Luhn algorthm](http://en.wikipedia.org/wiki/Luhn_algorithm) to determine if the credit card number is potentially valid
 - Write a `card_type` method that will return Visa, MasterCard, Discover, American Express or Other
 
-##### BONUS
+##### BONUS 1
+Credit cards are usually validated using a [Luhn algorthm](http://en.wikipedia.org/wiki/Luhn_algorithm); add a method to your CreditCard class to validate the card number, and incorporate the result into 'valid?'.
+
+##### BONUS 2
 This repo has some tests in it using a Ruby testing tool called Rspec; Rspec code looks very similar to another testing tool that you've already used, Jasmine. If you have time, create a new repo and re-create your Credit Card class using a test-driven approach.

@@ -1,4 +1,5 @@
 require 'time'
+require_relative 'luhn_formula'
 
 class CreditCard
   def initialize(number, date, ccv, name, zip_code)
@@ -11,6 +12,10 @@ class CreditCard
 
   def valid?
     has_name? && check_zip_code && check_card_number && valid_date?
+  end
+
+  def luhn_formula
+    LuhnFormula.checksum(@number.to_s) # return the checksum digit
   end
 
   private
@@ -30,11 +35,5 @@ class CreditCard
     date = Time.parse(@date)
     date > Time.now
   end
-
-  #luhn algorithm
-  def luhn_method
-    double_digits = @number.chars.each_with_index do |value, index|
-      value.to_i + 1 if index.odd?
-    end
-  end
 end
+

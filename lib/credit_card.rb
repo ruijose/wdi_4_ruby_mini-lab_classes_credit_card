@@ -30,4 +30,11 @@ class CreditCard
     date = Time.parse(@date)
     date > Time.now
   end
+
+  #luhn algorithm
+  def luhn_method
+    double_digits = @number.chars.each_with_index do |value, index|
+      value.to_i + 1 if index.odd?
+    end
+  end
 end
